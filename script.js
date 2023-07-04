@@ -13,21 +13,3 @@ function rimuovi() {
   localStorage.setItem("utenti", JSON.stringify(utenti));
 }
 
-function mostraLista() {
-  let utenti = JSON.parse(localStorage.getItem("utenti")) || [];
-  let lista = document.getElementById("lista");
-  lista.innerHTML = "";
-  lista.style.display = "block"; 
-  for (let i = 0; i < utenti.length; i++) {
-    let li = document.createElement("li");
-    li.innerHTML = "Nome: " + utenti[i].nome + " - Cognome: " + utenti[i].cognome;
-    lista.appendChild(li);
-  }
-}
-
-
-
-function nascondiLista() {
-  let lista = document.getElementById("lista");
-  lista.style.display = "none";
-}
